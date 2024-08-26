@@ -1,0 +1,177 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-light-color: #d5eed4;
+  --main-light-color-lighter: #ffffff;
+  --main-light-contrast-color: #b7ccc5;
+  --main-light-font-color: #ffffff;
+  --main-dark-color: #158f67;
+}
+
+body,
+#root {
+  height: 100vh;
+  margin: 0;
+}
+
+body,
+input,
+select,
+textarea {
+  font-size: 1.6rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "main"
+    "footer";
+  grid-template-rows: 1fr 5rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+main {
+  grid-area: main;
+  background-color: var(--main-light-color);
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--main-dark-color);
+  color: var(--main-light-font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  background-color: var(--main-dark-color);
+  color: var(--main-light-font-color);
+  font-size: 3rem;
+  height: 9rem;
+}
+
+.product_view_page {
+  display: flex;
+}
+
+.products_column {
+  flex-grow: 4;
+  display: flex;
+  align-content: center;
+}
+
+.category_bar {
+  flex-direction: column;
+  display: flex;
+  place-items: center;
+}
+
+.category_tree {
+  margin-top: 3rem;
+}
+
+.products_cards {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  align-content: flex-start;
+}
+
+.btn-big_submit {
+  color: var(--main-dark-color);
+  background-color: var(--main-light-color);
+  border-color: var(--main-dark-color);
+}
+
+.btn-big_submit:hover {
+  color: var(--main-dark-color);
+  background-color: var(--main-light-contrast-color);
+  border-color: var(--main-dark-color);
+}
+
+.btn-big_submit:focus,
+.btn-big_submit.focus {
+  box-shadow: 0 0 0 0.2rem var(--main-light-color-lighter);
+}
+
+.btn-big_submit:not(:disabled):not(.disabled):active,
+.btn-big_submit:not(:disabled):not(.disabled).active,
+.show > .btn-big_submit.dropdown-toggle {
+  color: var(--main-light-contrast-color);
+  background-color: var(--main-light-contrast-color);
+  border-color: var(--main-light-contrast-color);
+}
+
+.btn-big_submit:not(:disabled):not(.disabled):active:focus,
+.btn-big_submit:not(:disabled):not(.disabled).active:focus,
+.show > .btn-big_submit.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem var(--main-light-contrast-color);
+}
+
+.btn-xl {
+  padding: 1rem 8rem;
+  font-size: 2rem;
+  border-radius: 5rem;
+}
+
+.btn-show_product,
+.btn-show_product:hover,
+.btn-show_product:focus,
+.btn-show_product.focus,
+.btn-show_product:not(:disabled):not(.disabled):active,
+.btn-show_product:not(:disabled):not(.disabled).active,
+.show > .btn-show_product.dropdown-toggle,
+.btn-show_product:not(:disabled):not(.disabled):active:focus,
+.btn-show_product:not(:disabled):not(.disabled).active:focus,
+.show > .btn-show_product.dropdown-toggle:focus {
+  color: var(--main-light-color-lighter);
+  background-color: var(--main-light-color-lighter);
+  border-color: var(--main-light-color-lighter);
+  box-shadow: none;
+}
+
+.category_card {
+  background-color: var(--main-light-color);
+  width: 15rem;
+}
+
+.card-img-top {
+  max-width: 20rem;
+  max-height: 30rem;
+}
+
+.centred_form {
+  width: 100vh;
+  justify-content: center;
+  margin: 5% auto;
+}
+
+.window_line {
+  border: 5px solid var(--main-dark-color);
+}
+
+.form_title {
+  font-weight: bold;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.between_fields_spacing {
+  margin-bottom: 2rem;
+}
+
+.submit_form {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.centered {
+  display: grid;
+  place-items: center;
+}
